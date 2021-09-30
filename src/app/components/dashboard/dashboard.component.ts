@@ -22,9 +22,8 @@ export class DashboardComponent implements OnInit {
 
   
   ngOnInit(): void {
-   this.myform = this.fb.FormGroup({
-     message: ['', Validators.required]
-   })
+   
+
   }
   
   createuserviagoogle(){
@@ -32,7 +31,7 @@ export class DashboardComponent implements OnInit {
     this.authSvs.googleSignIn(this.message, ).then((result)=>{
       this.loading=false;
     });
-
+    
   }
   
 
