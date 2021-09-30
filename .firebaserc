@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "testing-7eee3": {
+      "hosting": {
+        "form": [
+          "testing-7eee3"
+        ]
+      }
+    }
+  }
+}

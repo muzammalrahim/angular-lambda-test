@@ -1,0 +1,63 @@
+
+
+<div class="container mt-5  shadow rounded " style="background-color:white;">
+    <div class="row my-header">
+        <div class="col-6 p-3 pl-3 " style="background-color:white;">
+            <a href="https://google.com" target="_blank"><img src="../../../assets/images/logo.png" alt="logo" width="192" height="42"></a>
+        </div>
+        <div class="col-6 p-3" style="background-color:white; text-align: right;">
+            <a href="https://google.com" target="_blank"><img src="../../../assets/images/Download_on_the_App_Store_Badge_US-UK_wht_092917-2.png" alt="Download the App" width="120" height="40"></a>
+        </div>
+    </div>
+    <form (ngSubmit)="createuserviagoogle()"  novalidate #myForm="ngForm" >
+        <div class="container shadow pt-5" style="background-color:   #f9f9f9;">
+        <div class="row">
+            <div class="col-12">
+                <p style="color: #292929; font-size: 20px; text-align: center; font-family: dubai;">
+                    <strong>  اكتب رأيك عن </strong> <input disabled  placeholder="{{message}}"  id="message"
+                    name="message"  >
+
+                </p>
+            </div>
+        
+            <div class="col-12 model-body">
+                <textarea  type="text"  for="message" [(ngModel)]="message" name="message" required class="form-control  mb-3 input"  id="Seen_op" placeholder="اكتب رأيك عن   .. "  rows="8" 
+                ></textarea>
+               
+            </div>
+        
+            <div class="col-12 mb-5">
+                <div>
+                    <button  type="submit" class="btn pl-5 pr-5 "  style="background-color: #FD3C58; color: white;     padding-left: 40px;
+                    padding-right: 40px;"(click)="createuserviagoogle()" [disabled]="myForm.invalid">
+                        <button *ngIf="loading" buttonLoader  type="button" class="spinner" ></button> 
+                        <span class="button__text">
+                            أرسل رأيك
+                        </span>
+                    </button>
+                </div>
+                
+                <ng-template #other_content>
+                    <div></div>
+                </ng-template>
+            </div>
+        
+        </div>
+
+        </div> 
+    </form>
+    
+<div class="container shadow pt-2 rounded" style="background-color:   #0f0e0e; height: 40px;">
+    <div class="row">
+        <div class="col-6"> 
+            <p style="color: #9e9c9c; font-size: 10px; text-align: right; font-family: dubai;"> Seen App</p>
+        </div>
+        <div class="col-3">
+            <a href="https://seen.fm/terms-of-use/" target="_blank"><p style="color: #9e9c9c; font-size: 10px; text-align: right; font-family: dubai;">Terms of use</p></a>
+        </div>
+        <div class="col-3">
+            <a href="https://seen.fm/privacy-policy/" target="_blank"><p style="color: #9e9c9c; font-size: 10px; text-align: left; font-family: dubai;">Privacy Policy</p></a>
+        </div>
+    </div>
+</div>
+
